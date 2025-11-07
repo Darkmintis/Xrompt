@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     showLandingPage();
     
-    console.log('%c🚀 Xrompt - XML Prompt Generator', 'font-size: 16px; font-weight: bold; color: #FF6B35;');
+    console.log('%c🚀 Xrompt - XML Prompt Generator', 'font-size: 16px; font-weight: bold; color: #E67E22;');
     console.log('%cBy Darkmintis - Open-source project', 'color: #9333EA;');
     console.log('%cGitHub: https://github.com/Darkmintis/Xrompt', 'color: #22C55E;');
 });
