@@ -1,0 +1,367 @@
+/* ===================================
+   SURVEY QUESTIONS STYLING - LIGHT MODE
+   Redesigned to fit everything in one screen
+   =================================== */
+
+/* Survey Container - Light Mode */
+#survey-page {
+    display: none;
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(135deg, #FFF5F2 0%, #FFF 50%, #F0F9FF 100%);
+}
+
+#survey-page.active {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Survey Header - Compact */
+.survey-header {
+    background: white;
+    padding: 1rem 2rem;
+    border-bottom: 2px solid rgba(255, 107, 53, 0.1);
+    flex-shrink: 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.survey-header > * {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.survey-header h2 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    color: #1F2937;
+    font-weight: 700;
+}
+
+.progress-bar {
+    background: rgba(255, 107, 53, 0.1);
+    border-radius: 10px;
+    height: 6px;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+}
+
+.progress-fill {
+    background: linear-gradient(90deg, #FF6B35 0%, #F59E0B 100%);
+    height: 100%;
+    transition: width 0.3s ease;
+    border-radius: 10px;
+}
+
+.progress-text {
+    color: #6B7280;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+    font-weight: 600;
+}
+
+/* Survey Content - NO SCROLL, Fits in viewport */
+.survey-content {
+    flex: 1;
+    overflow: hidden;
+    padding: 1.5rem 2rem;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+}
+
+#question-container {
+    max-width: 800px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Question Card - Compact */
+.question-card {
+    background: white;
+    border: 2px solid rgba(255, 107, 53, 0.15);
+    border-radius: 16px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    flex-shrink: 0;
+}
+
+.question-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: #1F2937;
+    line-height: 1.3;
+    font-weight: 700;
+}
+
+.question-card p {
+    color: #6B7280;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+    font-size: 0.95rem;
+}
+
+/* Text Input - Compact */
+.question-card input[type="text"] {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background: #F9FAFB;
+    border: 2px solid #E5E7EB;
+    border-radius: 10px;
+    color: #1F2937;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+.question-card input[type="text"]:focus {
+    outline: none;
+    border-color: #FF6B35;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.1);
+}
+
+.question-card input[type="text"]::placeholder {
+    color: #9CA3AF;
+}
+
+/* Textarea - Compact (only when needed) */
+.question-card textarea {
+    width: 100%;
+    min-height: 100px;
+    max-height: 150px;
+    padding: 0.75rem 1rem;
+    background: #F9FAFB;
+    border: 2px solid #E5E7EB;
+    border-radius: 10px;
+    color: #1F2937;
+    font-size: 1rem;
+    resize: vertical;
+    transition: all 0.3s ease;
+    font-family: inherit;
+    line-height: 1.5;
+}
+
+.question-card textarea:focus {
+    outline: none;
+    border-color: #FF6B35;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.1);
+}
+
+.question-card textarea::placeholder {
+    color: #9CA3AF;
+}
+
+/* Dropdown Select - NEW! For card-type questions */
+.question-card select {
+    width: 100%;
+    padding: 0.875rem 1rem;
+    background: white;
+    border: 2px solid #E5E7EB;
+    border-radius: 10px;
+    color: #1F2937;
+    font-size: 1rem;
+    font-family: inherit;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%23FF6B35' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    padding-right: 3rem;
+}
+
+.question-card select:focus {
+    outline: none;
+    border-color: #FF6B35;
+    box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.1);
+}
+
+.question-card select option {
+    padding: 0.5rem;
+    background: white;
+    color: #1F2937;
+}
+
+.question-card select option:hover {
+    background: #FFF5F2;
+}
+
+/* Banner Ad Below Question */
+.survey-banner-ad {
+    margin: 1.5rem 0;
+    flex-shrink: 0;
+}
+
+.survey-banner-ad .ad-placeholder-banner {
+    width: 100%;
+    max-width: 728px;
+    height: 90px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border: 2px dashed #dee2e6;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6c757d;
+    font-size: 0.875rem;
+    font-weight: 600;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Inline Navigation Buttons (below question) */
+.inline-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.inline-navigation button {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.inline-navigation button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.inline-navigation button:not(:disabled):hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.inline-navigation #prev-btn {
+    background: #F3F4F6;
+    color: #4B5563;
+    border: 2px solid #E5E7EB;
+}
+
+.inline-navigation #prev-btn:not(:disabled):hover {
+    background: #E5E7EB;
+    border-color: #D1D5DB;
+}
+
+.inline-navigation #next-btn,
+.inline-navigation #generate-btn {
+    background: linear-gradient(135deg, #FF6B35 0%, #F59E0B 100%);
+    color: white;
+    border: 2px solid transparent;
+}
+
+.inline-navigation #next-btn:not(:disabled):hover,
+.inline-navigation #generate-btn:not(:disabled):hover {
+    background: linear-gradient(135deg, #F59E0B 0%, #FF6B35 100%);
+}
+
+/* Survey Navigation - Light Mode (Footer - now hidden or minimal) */
+.survey-navigation {
+    display: none; /* Hide the footer navigation since we have inline buttons */
+}
+
+/* Keyboard Hint */
+.keyboard-hint {
+    position: fixed;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: rgba(255, 255, 255, 0.7);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    pointer-events: none;
+    z-index: 100;
+}
+
+.keyboard-hint kbd {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-family: monospace;
+    color: #FF6B35;
+}
+
+/* ===================================
+   RESPONSIVE DESIGN FOR SURVEYS
+   =================================== */
+
+@media (max-width: 768px) {
+    .survey-header {
+        padding: 0.875rem 1rem;
+    }
+
+    .survey-header h2 {
+        font-size: 1.125rem;
+    }
+
+    .survey-content {
+        padding: 1rem;
+    }
+
+    .question-card {
+        padding: 1.25rem;
+    }
+
+    .question-card h3 {
+        font-size: 1.125rem;
+    }
+
+    .question-card textarea {
+        min-height: 80px;
+        max-height: 120px;
+    }
+
+    .inline-navigation {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .inline-navigation button {
+        width: 100%;
+        justify-content: center;
+        padding: 0.625rem 1.25rem;
+        font-size: 0.95rem;
+    }
+
+    .survey-banner-ad .ad-placeholder-banner {
+        height: 70px;
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .survey-header h2 {
+        font-size: 1rem;
+    }
+
+    .question-card {
+        padding: 1rem;
+    }
+
+    .question-card h3 {
+        font-size: 1rem;
+    }
+
+    .question-card textarea {
+        min-height: 70px;
+    }
+
+    .inline-navigation button {
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem;
+    }
+}
